@@ -13,7 +13,7 @@ const Home = () => {
     <div className='w-full h-full flex flex-col px-10 py-8'>
       <div className='w-full flex flex-col min-h-[50vh] justify-center items-center'>
         <h1 className='text-black text-3xl font-semibold '>Home Page</h1>
-        <table className='w-[90%] flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5'>
+        <table className='w-[90%] text-center overflow-hidden overflow-y-scroll mt-5 rounded-lg border border-black '>
           <thead className='border-b bg-gray-800 '>
             <tr>
               <th
@@ -48,12 +48,9 @@ const Home = () => {
               </th>
             </tr>
           </thead>
-          <tbody class='flex-1 sm:flex-none'>
+          <tbody>
             {users.map((user, index) => (
-              <tr
-                className='bg-white border-b border-b-slate-900 flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0'
-                key={index}
-              >
+              <tr className='bg-white border-b border-b-slate-900 ' key={index}>
                 <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>
                   {index}
                 </td>
