@@ -1,7 +1,7 @@
-import { useParams,Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import {IoReturnUpBack } from 'react-icons/io5';
+import { IoReturnUpBack } from 'react-icons/io5';
 const User = () => {
   const { id } = useParams();
   const [user, setUser] = useState();
@@ -14,7 +14,7 @@ const User = () => {
   return (
     <>
       <Link to='/'>
-        <IoReturnUpBack className=' mt-5 ml-4 hover:border hover:border-red-700 bg-red-600 hover:bg-transparent w-20 h-5 text-white hover:text-red-600 rounded-full ' />
+        <IoReturnUpBack size={35} className=' mt-5 ml-4 hover:border hover:border-red-700 bg-red-600 hover:bg-transparent w-20 h-5 text-white font-bold hover:text-red-600 rounded-full ' />
       </Link>
 
       <div className='w-full h-full flex items-center justify-center'>
