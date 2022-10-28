@@ -34,7 +34,7 @@ const Adduser = () => {
         </h1>
         <div className='mb-6'>
           <label
-            type='text'
+            htmlFor='name'
             className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
           >
             Name
@@ -50,7 +50,7 @@ const Adduser = () => {
         </div>
         <div className='mb-6'>
           <label
-            type='text'
+            htmlFor='username'
             className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
           >
             Username
@@ -66,7 +66,7 @@ const Adduser = () => {
         </div>
         <div className='mb-6'>
           <label
-            for='email'
+            htmlFor='email'
             className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
           >
             Your email
@@ -82,7 +82,7 @@ const Adduser = () => {
         </div>
         <div className='mb-6'>
           <label
-            type='text'
+            htmlFor='phone number'
             className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
           >
             Phone Number

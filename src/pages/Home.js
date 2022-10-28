@@ -10,36 +10,35 @@ const Home = () => {
   const loadUser = () => {
     axios.get('http://localhost:3003/users').then((res) => {
       setUsers(res.data);
-      
     });
   };
-  useEffect(() => {   
+  useEffect(() => {
     loadUser();
   }, []);
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3003/users/${id}`).then(()=>loadUser());
+    axios.delete(`http://localhost:3003/users/${id}`).then(() => loadUser());
   };
   return (
-    <div class=' md:ml-48  mt-10 overflow-x-auto relative sm:rounded-lg'>
-      <table class=' text-sm text-left text-white  '>
-        <thead class='border bg-black'>
+    <div className=' md:ml-48  mt-10 overflow-x-auto relative sm:rounded-lg'>
+      <table className=' text-sm text-left text-white  '>
+        <thead className='border bg-black'>
           <tr>
-            <th scope='col' class='py-3 px-6'>
+            <th scope='col' className='py-3 px-6'>
               #
             </th>
-            <th scope='col' class='py-3 px-6'>
+            <th scope='col' className='py-3 px-6'>
               Name
             </th>
-            <th scope='col' class='py-3 px-6'>
+            <th scope='col' className='py-3 px-6'>
               Email
             </th>
-            <th scope='col' class='py-3 px-6'>
+            <th scope='col' className='py-3 px-6'>
               Phone
             </th>
-            {/* <th scope='col' class='py-3 px-6'>
+            {/* <th scope='col' className='py-3 px-6'>
               Address
             </th> */}
-            <th scope='col' class='py-3 px-6'>
+            <th scope='col' className='py-3 px-6'>
               Action
             </th>
           </tr>
@@ -74,10 +73,16 @@ const Home = () => {
                     <TbListDetails />
                   </button>
                 </Link>
-                <button className='text-white bg-blue-700 hover:border hover:border-blue-700  hover:bg-transparent hover:text-blue-700 font-light px-6 py-2 rounded-lg'>
+                <Link
+                  to={`/edit/${user.id}`}
+                  className='text-white bg-blue-700 hover:border hover:border-blue-700  hover:bg-transparent hover:text-blue-700 font-light px-6 py-2 rounded-lg'
+                >
                   <FaEdit />
-                </button>
-                <button onClick={()=>handleDelete(user.id)} className='text-white bg-red-700 hover:border hover:border-red-900  hover:bg-transparent hover:text-red-700  font-light px-6 py-2 rounded-lg'>
+                </Link>
+                <button
+                  onClick={() => handleDelete(user.id)}
+                  className='text-white bg-red-700 hover:border hover:border-red-900  hover:bg-transparent hover:text-red-700  font-light px-6 py-2 rounded-lg'
+                >
                   <MdDelete />
                 </button>
               </td>
