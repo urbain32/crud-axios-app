@@ -14,7 +14,6 @@ const Home = () => {
   }, []);
   return (
     <div class=' md:ml-48  mt-10 overflow-x-auto relative sm:rounded-lg'>
-      <h1 className='flex justify-center items-center text-2xl mb-5 font-bold'>ALL USERS</h1>
       <table class=' text-sm text-left text-white  '>
         <thead class='border bg-black'>
           <tr>
@@ -30,6 +29,9 @@ const Home = () => {
             <th scope='col' class='py-3 px-6'>
               Phone
             </th>
+            {/* <th scope='col' class='py-3 px-6'>
+              Address
+            </th> */}
             <th scope='col' class='py-3 px-6'>
               Action
             </th>
@@ -53,6 +55,12 @@ const Home = () => {
               <td className='text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap '>
                 {user.phone}
               </td>
+
+              {/* <td className='text-lg text-gray-900 font-light px-6 py-4 whitespace-nowrap '>
+                urban
+                {console.log('first', user.address)}
+              </td> */}
+
               <td className='flex justify-center items-center space-x-4 mt-1 p-4 '>
                 <Link to={`/users/${user.id}`}>
                   <button className='text-white bg-slate-700 hover:border hover:border-black hover:bg-transparent hover:text-black font-light px-6 py-2 rounded-lg '>
