@@ -21,6 +21,9 @@ const User = () => {
                 Name
               </h2>
               <h2 className='text-black font-semibold text-xl border-b border-black'>
+                Username
+              </h2>
+              <h2 className='text-black font-semibold text-xl border-b border-black'>
                 Email
               </h2>
               <h2 className='text-black font-semibold text-xl border-b border-black '>
@@ -30,6 +33,9 @@ const User = () => {
             <div className='w-5/12 flex flex-col space-y-4 '>
               <h2 className='text-black font-semibold text-xl border-b border-black'>
                 {user.name}
+              </h2>
+              <h2 className='text-black font-semibold text-xl border-b border-black'>
+                {user.username}
               </h2>
               <h2 className='text-black font-semibold text-xl border-b border-black'>
                 {user.email}
