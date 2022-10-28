@@ -1,35 +1,6 @@
 {
   "users": [
     {
-      "name": "Ervin Howell",
-      "email": "Ervin@melissa.tv",
-      "phone": "010-692-6593 x09125",
-      "id": 2
-    },
-    {
-      "id": 3,
-      "name": "Clementine Bauch",
-      "username": "Samantha",
-      "email": "Nathan@yesenia.net",
-      "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157",
-        "geo": {
-          "lat": "-68.6102",
-          "lng": "-47.0653"
-        }
-      },
-      "phone": "1-463-123-4447",
-      "website": "ramiro.info",
-      "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
-      }
-    },
-    {
       "id": 4,
       "name": "Patricia Lebsack",
       "username": "Karianne",
@@ -135,25 +106,11 @@
       "id": 9
     },
     {
-      "name": "Voluptate adipisicin",
-      "username": "Commodi suscipit est",
-      "email": "laja@mailinator.com",
-      "phone": "+1 (477) 365-3701",
+      "name": "Non explicabo Quae ",
+      "username": "Laborum Excepteur t",
+      "email": "telo@mailinator.com",
+      "phone": "+1 (479) 969-9212",
       "id": 10
-    },
-    {
-      "name": "Obcaecati qui esse ",
-      "username": "Nobis delectus corp",
-      "email": "sowiw@mailinator.com",
-      "phone": "+1 (701) 522-7047",
-      "id": 11
-    },
-    {
-      "name": "Ex et do quis debiti",
-      "username": "Nemo laudantium deb",
-      "email": "vehigegof@mailinator.com",
-      "phone": "+1 (978) 657-5432",
-      "id": 12
     }
   ]
 }

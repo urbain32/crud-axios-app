@@ -7,11 +7,18 @@ import { FaEdit } from 'react-icons/fa';
 import { MdDelete } from 'react-icons/md';
 const Home = () => {
   const [users, setUsers] = useState([]);
-  useEffect(() => {
+  const loadUser = () => {
     axios.get('http://localhost:3003/users').then((res) => {
       setUsers(res.data);
+      
     });
+  };
+  useEffect(() => {   
+    loadUser();
   }, []);
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:3003/users/${id}`).then(()=>loadUser());
+  };
   return (
     <div class=' md:ml-48  mt-10 overflow-x-auto relative sm:rounded-lg'>
       <table class=' text-sm text-left text-white  '>
@@ -70,7 +77,7 @@ const Home = () => {
                 <button className='text-white bg-blue-700 hover:border hover:border-blue-700  hover:bg-transparent hover:text-blue-700 font-light px-6 py-2 rounded-lg'>
                   <FaEdit />
                 </button>
-                <button className='text-white bg-red-700 hover:border hover:border-red-900  hover:bg-transparent hover:text-red-700  font-light px-6 py-2 rounded-lg'>
+                <button onClick={()=>handleDelete(user.id)} className='text-white bg-red-700 hover:border hover:border-red-900  hover:bg-transparent hover:text-red-700  font-light px-6 py-2 rounded-lg'>
                   <MdDelete />
                 </button>
               </td>
